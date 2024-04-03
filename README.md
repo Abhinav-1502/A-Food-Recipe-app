@@ -14,6 +14,15 @@ Nostalgic Food and Recipes is a JavaFX application that allows users to explore,
 
 - **Interactivity:** Users can engage with the community by liking, commenting, and sharing recipes with others.
 
+## Technologies Used
+
+- **JavaFX:** A platform for creating desktop applications using Java.
+- **FXML:** A markup language for defining the user interface of JavaFX applications.
+- **CSS:** Cascading Style Sheets for styling the user interface components.
+- **MongoDB:** A NoSQL database used for storing user data, recipes, and other application information.
+- **FontAwesome:** A library of icons used for enhancing the visual appeal of the application.
+
+
 ## File Structure
 
 - **Application Package:**
