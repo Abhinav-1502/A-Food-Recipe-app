@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<AnchorPane minHeight="400.0" minWidth="500.0" prefHeight="605.0" prefWidth="580.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21">
+   <children>
+      <HBox layoutX="1.0" layoutY="-3.0" prefHeight="101.0" prefWidth="578.0" style="-fx-background-color: edcccc;" />
+      <HBox layoutY="98.0" prefHeight="506.0" prefWidth="578.0">
+         <children>
+            <ScrollPane prefHeight="441.0" prefWidth="579.0">
+               <content>
+                  <GridPane prefHeight="105.0" prefWidth="128.0" style="-fx-background-color: #e5e5e5;">
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

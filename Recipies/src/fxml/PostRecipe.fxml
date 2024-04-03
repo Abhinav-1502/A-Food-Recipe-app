@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="852.0" prefWidth="918.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PostRecipeController">
+   <children>
+      <HBox prefHeight="90.0" prefWidth="665.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="95.0" prefWidth="837.0" style="-fx-background-color: #c2555540; -fx-border-color: lightgrey;" text="Post Your Delicious Recipe Here!" textFill="#c25555" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Freestyle Script" size="77.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <Separator prefWidth="200.0" />
+      <HBox layoutY="107.0" prefHeight="690.0" prefWidth="950.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="107.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox prefHeight="30.0" prefWidth="918.0">
+                     <children>
+                        <Hyperlink fx:id="goBackLink" onAction="#handleGoBack" prefHeight="29.0" prefWidth="338.0" text=" &lt; Go Back To Dashboard">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Hyperlink>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="285.0" prefWidth="918.0">
+                     <children>
+                        <VBox prefHeight="228.0" prefWidth="316.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Name of Your Recipe:" wrappingWidth="315.13671875" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets left="25.0" top="15.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Italic" size="19.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="recipeNameTF" prefHeight="43.0" prefWidth="253.0" promptText="Title of your recipe" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Preparation Time:" wrappingWidth="315.13671875" VBox.vgrow="ALWAYS">
+                                 <font>
+                                    <Font name="System Italic" size="19.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="25.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox prefHeight="51.0" prefWidth="341.0">
+                                 <children>
+                                    <TextField fx:id="prepTimeTF" prefHeight="39.0" prefWidth="266.0" promptText="Preparation Time">
+                                       <HBox.margin>
+                                          <Insets left="25.0" top="10.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <ComboBox fx:id="timeCB1" prefWidth="150.0" promptText="Hours" visibleRowCount="2">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="15.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                 </children>
+                              </HBox>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cook Time:" wrappingWidth="315.13671875" VBox.vgrow="ALWAYS">
+                                 <font>
+                                    <Font name="System Italic" size="19.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="25.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox prefHeight="59.0" prefWidth="341.0">
+                                 <children>
+                                    <TextField fx:id="cookTimeTF" prefHeight="39.0" prefWidth="266.0" promptText="Cook Time">
+                                       <HBox.margin>
+                                          <Insets left="25.0" top="10.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <ComboBox fx:id="timeCB2" prefWidth="150.0" promptText="Hours" visibleRowCount="2">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="15.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Separator>
+                        <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox prefHeight="53.0" prefWidth="566.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Set A Recipe Id: " wrappingWidth="156.13671875" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="15.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <TextField fx:id="recipeIdTF" promptText="Must Be Unique">
+                                       <HBox.margin>
+                                          <Insets top="10.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Text fx:id="validTick" strokeType="OUTSIDE" strokeWidth="0.0" text="✓" visible="false" wrappingWidth="21.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Button mnemonicParsing="false" onAction="#checkIdAvailability" prefHeight="24.0" prefWidth="142.0" text="Check For Availability">
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <Separator prefWidth="200.0" />
+                              <HBox prefHeight="241.0" prefWidth="566.0">
+                                 <children>
+                                    <VBox prefHeight="240.0" prefWidth="435.0">
+                                       <children>
+                                          <Label focusTraversable="false" prefHeight="43.0" prefWidth="310.0" text="List add your ingredients:" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font size="22.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="5.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Text fx:id="ingredientsSubmitted" disable="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" wrappingWidth="348.13671875" VBox.vgrow="ALWAYS">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="DEFAULT" />
+                                             </cursor>
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                          </Text>
+                                          <TextArea fx:id="ingredientsTB" prefHeight="166.0" prefWidth="343.0" promptText="Type your ingredients seperated by commas(,)" VBox.vgrow="ALWAYS">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </TextArea>
+                                          <HBox prefHeight="36.0" prefWidth="353.0">
+                                             <children>
+                                                <Button fx:id="listIngredientsBtn" mnemonicParsing="false" onAction="#listIngredientsListener" prefHeight="37.0" prefWidth="125.0" text="List Ingredients">
+                                                   <HBox.margin>
+                                                      <Insets bottom="5.0" left="5.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <Button fx:id="editIngredientsBtn" mnemonicParsing="false" onAction="#editIngredientsListener" prefHeight="36.0" prefWidth="125.0" text="Edit Ingredients">
+                                                   <HBox.margin>
+                                                      <Insets bottom="5.0" left="5.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                    <VBox prefHeight="235.0" prefWidth="192.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add a Picture Of Your Recipe:" wrappingWidth="201.13671875">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="5.0" top="5.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                          <Button fx:id="selectImageBtn" mnemonicParsing="false" onAction="#selectImageHandler" prefHeight="27.0" prefWidth="97.0" text="Select Image">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="10.0" top="5.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                          <ImageView fx:id="recipeImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="918.0" />
+                  <HBox prefHeight="431.0" prefWidth="828.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label prefHeight="55.0" prefWidth="539.0" text="Enter Detailed Instructions of the Recipe:">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextArea fx:id="instructionsTB" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextArea>
+                              <Button mnemonicParsing="false" onAction="#submtiForm" prefHeight="52.0" prefWidth="189.0" text="Submit Your Recipe">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" left="25.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

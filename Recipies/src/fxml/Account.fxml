@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.94" prefHeight="733.0" prefWidth="718.0" style="-fx-border-width: 2px;" styleClass="light-gradient" stylesheets="@../application/LoginDesign.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AccountController">
+   <children>
+      <VBox alignment="CENTER" layoutX="14.0" layoutY="-2.0" prefHeight="683.0" prefWidth="654.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="91.0" prefWidth="715.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="44.0" prefWidth="270.0" stylesheets="@../application/LoginDesign.css" text="ACCOUNT DETAILS" textAlignment="JUSTIFY" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="24.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="NONE" />
+                     </cursor>
+                     <styleClass>
+                        <String fx:value="dashboardBar3" />
+                        <String fx:value="shadow3" />
+                     </styleClass>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="103.0" prefWidth="580.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="75.0" right="10.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../assets/Icons/user.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="100.0" prefWidth="352.0" text="User Name:" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="userName" contentDisplay="CENTER" prefHeight="100.0" prefWidth="389.0" text="Label" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Comic Sans MS" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="103.0" prefWidth="580.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/Icons/user.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="75.0" right="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="100.0" prefWidth="352.0" text="Full Name:" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="fullName" contentDisplay="CENTER" prefHeight="100.0" prefWidth="389.0" text="Label" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Comic Sans MS" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/Icons/phone.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="75.0" right="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="120.0" prefWidth="352.0" text="Phone:" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="phone" contentDisplay="CENTER" prefHeight="120.0" prefWidth="389.0" text="Label" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Comic Sans MS" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/Icons/mail.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="75.0" right="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="120.0" prefWidth="352.0" text="Email ID:" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="emailId" contentDisplay="CENTER" prefHeight="120.0" prefWidth="389.0" text="Label" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Comic Sans MS" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/Icons/reload.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="75.0" right="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="71.0" prefWidth="349.0" text="Change Password:" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="386.0">
+                     <children>
+                        <Button fx:id="changePasswordBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#changePasswordHandler" prefHeight="50.0" prefWidth="182.0" style="-fx-border-width: 2px; -fx-border-color: linear-gradient(to bottom right, #e8f522, #e1880b);" styleClass="create-button" stylesheets="@../application/LoginDesign.css" text="CHANGE PASSSWORD" textAlignment="JUSTIFY">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/Icons/delete.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="75.0" right="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="71.0" prefWidth="349.0" text="Delete Account:" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="386.0">
+                     <children>
+                        <Button fx:id="delteAccountBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#deleteAccountHandler" prefHeight="50.0" prefWidth="182.0" style="-fx-border-width: 2px; -fx-border-color: linear-gradient(to bottom right, #e8f522, #e1880b);" styleClass="create-button" stylesheets="@../application/LoginDesign.css" text="Delete" textAlignment="JUSTIFY">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="logoutBtn" contentDisplay="CENTER" mnemonicParsing="false" onAction="#logoutHandler" prefHeight="51.0" prefWidth="141.0" style="-fx-border-width: 2px;" styleClass="dash-boardButtons" stylesheets="@../application/LoginDesign.css" text="LOGOUT" textFill="WHITE" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="25.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="dashboardBtn" contentDisplay="CENTER" mnemonicParsing="false" onAction="#dashboardHandler" prefHeight="51.0" prefWidth="141.0" style="-fx-border-width: 2px;" styleClass="dash-boardButtons" stylesheets="@../application/LoginDesign.css" text="DASHBOARD" textFill="WHITE" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="25.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

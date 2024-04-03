@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="398.0" minWidth="350.0" prefHeight="948.0" prefWidth="1212.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.RecipeDisplayController">
+   <children>
+      <VBox layoutX="6.0" layoutY="1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="recipeTitle" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="119.0" prefWidth="1007.0" style="-fx-background-color: FFC5C5;" text="Recipe Title" textFill="#6f3b3b">
+               <font>
+                  <Font name="Freestyle Script" size="88.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="goBackLink" onAction="#handleGoBack" prefHeight="42.0" prefWidth="293.0" text="  &lt;- go back to all recipies">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Hyperlink>
+            <ScrollPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+               <content>
+                  <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="762.0" prefWidth="1207.0">
+                     <children>
+                        <VBox prefHeight="718.0" prefWidth="863.0">
+                           <children>
+                              <HBox id="adf" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                                 <children>
+                                    <ImageView fx:id="recipe_image" fitHeight="172.0" fitWidth="233.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../assets/Chicken_Nuggets.jpg" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <VBox prefWidth="184.0" spacing="10.0">
+                                       <children>
+                                          <Text fx:id="recipeHeader" strokeType="OUTSIDE" strokeWidth="0.0" text="RecipeName by RecipeAuthor" wrappingWidth="223.13671875">
+                                             <font>
+                                                <Font name="Arial Italic" size="20.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                          <Text fx:id="prepTime" layoutX="10.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prep Time: prepTime" wrappingWidth="223.13671875">
+                                             <font>
+                                                <Font name="Arial Italic" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="cookTime" layoutX="10.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CookTime: cookTime" wrappingWidth="223.13671875">
+                                             <font>
+                                                <Font name="Arial Italic" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="complexity" strokeType="OUTSIDE" strokeWidth="0.0" text="Complexity: ⭐⭐⭐" wrappingWidth="223.13671875">
+                                             <font>
+                                                <Font name="Arial Italic" size="20.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <Separator prefHeight="15.0" prefWidth="1197.0" />
+                              <VBox fx:id="ingredientsVbox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="312.0" prefWidth="863.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Ingredients:">
+                                       <font>
+                                          <Font name="Arial Italic" size="33.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="25.0" />
+                                       </padding>
+                                    </Label>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <ScrollPane minHeight="250.0" prefHeight="250.0" prefWidth="863.0" HBox.hgrow="ALWAYS">
+                                             <content>
+                                                <GridPane fx:id="ingredientsGrid" hgap="10.0" prefHeight="99.0" prefWidth="178.0" vgap="10.0">
+                                                   <padding>
+                                                      <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                                                   </padding>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                             </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </VBox>
+                              <Separator prefHeight="15.0" prefWidth="1197.0" />
+                              <VBox fx:id="instructionsVbox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="312.0" prefWidth="863.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="60.0" prefWidth="242.0" text="Instructions:">
+                                       <font>
+                                          <Font name="Arial Italic" size="33.0" />
+                                       </font>
+                                    </Label>
+                                    <Text fx:id="instructionsTextBox" strokeType="OUTSIDE" strokeWidth="0.0" text="Recipe Instructions" wrappingWidth="827.13671875">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="30.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <Separator prefHeight="15.0" prefWidth="1197.0" />
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="718.0" prefWidth="338.0">
+                           <children>
+                              <Label prefHeight="66.0" prefWidth="343.0" text="Reviews:">
+                                 <font>
+                                    <Font size="29.0" />
+                                 </font>
+                              </Label>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rating: ⭐⭐⭐⭐⭐" wrappingWidth="201.71484375">
+                                 <font>
+                                    <Font name="System Italic" size="18.0" />
+                                 </font>
+                              </Text>
+                              <HBox prefHeight="330.0" prefWidth="338.0">
+                                 <children>
+                                    <ScrollPane prefHeight="353.0" prefWidth="338.0">
+                                       <content>
+                                          <GridPane fx:id="commentsDisplayGrid" prefHeight="368.0" prefWidth="333.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints />
+                                             </rowConstraints>
+                                          </GridPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </HBox>
+                              <TextArea fx:id="commentBox" minHeight="0.0" prefHeight="120.0" prefWidth="338.0" promptText="Leave a comment">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextArea>
+                              <Button fx:id="commentButton" minHeight="0.0" mnemonicParsing="false" onAction="#handleComments" prefHeight="40.0" prefWidth="105.0" text="Comment">
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Label fx:id="yourRecipeLabel" prefHeight="56.0" prefWidth="331.0" text="This Is Your Recipe Feel Free To Edit" visible="false">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <Button fx:id="editRecipeBtn" mnemonicParsing="false" onAction="#editRecipe" prefHeight="43.0" prefWidth="111.0" text="Edit Recipe" visible="false">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="deleteBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteRecipe" prefHeight="43.0" prefWidth="111.0" text="Delete Recipe" visible="false">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

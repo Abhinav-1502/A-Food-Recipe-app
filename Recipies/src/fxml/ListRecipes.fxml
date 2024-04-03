@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1373.0" stylesheets="@../application/LoginDesign.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ListRecipesController">
+   <children>
+      <BorderPane prefHeight="810.0" prefWidth="436.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox prefHeight="200.0" prefWidth="435.0" styleClass="grdient" stylesheets="@../application/LoginDesign.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="110.0" prefWidth="200.0" styleClass="nav-dash" stylesheets="@../application/LoginDesign.css">
+                     <children>
+                        <Label text="Explore Food" textFill="#d33939">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="75.0" prefWidth="300.0" stylesheets="@../application/LoginDesign.css">
+                     <VBox.margin>
+                        <Insets left="15.0" right="15.0" top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <TextField prefHeight="48.0" prefWidth="286.0" promptText="Search For Food" styleClass="searchTextArea" stylesheets="@../application/LoginDesign.css">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </TextField>
+                        <Button mnemonicParsing="false" prefHeight="47.0" prefWidth="95.0" styleClass="searchButton" stylesheets="@../application/LoginDesign.css" text="Search" textFill="#e8f522">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <styleClass>
+                        <String fx:value="searchBar" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </HBox>
+                  <Pane prefHeight="26.0" prefWidth="435.0" />
+                  <HBox prefHeight="40.0" prefWidth="435.0">
+                     <children>
+                        <Button fx:id="goBackBtn" mnemonicParsing="false" onAction="#handleGoBack" prefHeight="57.0" prefWidth="248.0" styleClass="cardButton" stylesheets="@../application/LoginDesign.css" text="Go Back To Dashboard" textFill="#070505">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="40.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <VBox fx:id="displayFoodCard" alignment="TOP_CENTER" prefHeight="531.0" prefWidth="355.0" stylesheets="@../application/LoginDesign.css">
+                     <VBox.margin>
+                        <Insets left="40.0" right="40.0" top="30.0" />
+                     </VBox.margin>
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="63.0" prefWidth="355.0" stylesheets="@../application/LoginDesign.css">
+                           <children>
+                              <Label fx:id="bigCardRecipeTitle" alignment="CENTER" prefHeight="63.0" prefWidth="309.0" text="Pizza" textAlignment="JUSTIFY" textFill="#e8f522">
+                                 <font>
+                                    <Font name="MV Boli" size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <ImageView fx:id="bigCardRecipeImage" fitHeight="170.0" fitWidth="285.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/Chicken_Nuggets.jpg" />
+                           </image>
+                           <VBox.margin>
+                              <Insets top="40.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Pane prefHeight="19.0" prefWidth="355.0" />
+                        <HBox alignment="CENTER" prefHeight="57.0" prefWidth="355.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="57.0" prefWidth="116.0" text="Prepared By:" textFill="#e8f522" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="MV Boli" size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="bigCardChef" alignment="CENTER" prefHeight="57.0" prefWidth="236.0" text="Markus Lambodius" textFill="#e8f522" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Button fx:id="openRecipeButton" mnemonicParsing="false" onAction="#openRecipeDisplay" prefHeight="46.0" prefWidth="199.0" stylesheets="@../application/LoginDesign.css" text="Show Full Receipe" textFill="#d33939">
+                           <VBox.margin>
+                              <Insets top="45.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="cardButton" />
+                              <String fx:value="shadow2" />
+                           </styleClass>
+                        </Button>
+                        <Text fx:id="hiddenRecipeId" strokeType="OUTSIDE" strokeWidth="0.0" text="RecipeId" visible="false" wrappingWidth="38.13671875" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="foodcard" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </VBox>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" styleClass="black" stylesheets="@../application/LoginDesign.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="grdient" stylesheets="@../application/LoginDesign.css">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="160.0" prefWidth="685.0" text="All Recipes" textFill="#e8f522">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="showYourRecipeBtn" minWidth="0.0" mnemonicParsing="false" onAction="#displayUserRecipes" prefHeight="45.0" prefWidth="180.0" styleClass="cardButton" stylesheets="@../application/LoginDesign.css" text="Show your recipes" textFill="#070505">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="showAllRecipesBtn" minWidth="0.0" mnemonicParsing="false" onAction="#showAllRecipes" prefHeight="45.0" prefWidth="0.0" styleClass="cardButton" stylesheets="@../application/LoginDesign.css" text="Show All recipes" textFill="#070505">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label fx:id="notPostedLabel" alignment="CENTER" minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="938.0" text="You Have Not Uploaded Any Recipes, Feel Free To Post One :)" textFill="WHITE">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <ScrollPane fx:id="scrollpaneGrid" prefHeight="662.0" prefWidth="785.0" style="-fx-background-color: rgba(0,0,0,0);" styleClass="searchBar" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </HBox.margin>
+                           <stylesheets>
+                              <URL value="@../application/LoginDesign.css" />
+                              <URL value="@../application/LoginDesign.css" />
+                           </stylesheets>
+                           <content>
+                              <GridPane fx:id="listGrid" hgap="25.0" prefHeight="0.0" prefWidth="42.0" vgap="25.0">
+                                 <padding>
+                                    <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                                 </padding>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
