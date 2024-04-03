@@ -1,0 +1,32 @@
+CSYE 6200 - Team Software Sizzlers
+
+Project: Nostalgic Food and Recipes
+
+Team Members:
+
+Abhishek Chintapalli - 002837203
+Venkata Naga Sri Sai Sujhata Meghana Tadikonda - 002642314
+Abhinav Eeranti - 002883528
+
+***********
+Instructions To Run The Project: "Nostalgic Food and Recipes"
+
+Open the file directory "Recipe" and navigate through the source folder to find the file named "Main.java."
+
+After Opening the Main Go to preferences -> Java -> Build Path -> User Libraries
+then add external Jars listed in the file javafx-sdk-21.0.1 (Provided).
+[This step is important as the fontawesome icons are added to the project which is the project's display logo].
+
+
+After successfully running the code, the entire application should function seamlessly. 
+***********
+
+Additional Resources:
+
+Presentation and Report: The project includes a comprehensive presentation and report. Please refer to these documents for a detailed overview of the project's objectives, development process, and outcomes.
+
+Video Link: For a visual walkthrough and demonstration of the project, you can access the video using the provided link.
+
+https://www.canva.com/design/DAF2ROaUZy0/9wZ4TAVILpeWJ5nLBu6sWQ/watch?utm_content=DAF2ROaUZy0&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel
+
+We hope you enjoy exploring the world of nostalgic food and recipes through our application. If you encounter any issues or have questions, feel free to reach out to any of our team members.
